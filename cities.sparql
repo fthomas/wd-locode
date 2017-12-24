@@ -1,5 +1,5 @@
 SELECT DISTINCT ?city ?cityLabel ?location ?locode WHERE {
-  ?city (wdt:P31/wdt:P279*) wd:Q515.
+  { ?city (wdt:P31/wdt:P279*) wd:Q515. } UNION { ?city (wdt:P31/wdt:P279*) wd:Q15284. }
   ?city wdt:P17 wd:Q183.
   ?city wdt:P625 ?location.
   OPTIONAL { ?city wdt:P1937 ?locode. }
